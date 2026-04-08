@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book an appointment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <h1>Book an appointment</h1>
+
+      <section class="calendar-panel" aria-label="Calendar">
+        <header class="calendar-header">
+          <h2 id="monthLabel"></h2>
+          <div class="month-controls">
+            <button id="prevMonth" type="button" aria-label="Previous month">&#8249;</button>
+            <button id="nextMonth" type="button" aria-label="Next month">&#8250;</button>
+          </div>
+        </header>
+
+        <div class="weekday-row" aria-hidden="true">
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+          <span>Sun</span>
+        </div>
+
+        <div id="calendarGrid" class="calendar-grid" role="grid" aria-label="Appointment dates"></div>
+      </section>
+
+      <section class="slots-panel" aria-label="Available slots">
+        <h3>Available slots</h3>
+        <div class="slot-toggle" role="tablist" aria-label="Session period">
+          <button class="toggle-btn is-active" data-period="Morning" role="tab" aria-selected="true">Morning</button>
+          <button class="toggle-btn" data-period="Afternoon" role="tab" aria-selected="false">Afternoon</button>
+        </div>
+      </section>
+
+      <section class="time-panel" aria-label="Time picker">
+        <h3>Time</h3>
+        <div id="timeGrid" class="time-grid"></div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
